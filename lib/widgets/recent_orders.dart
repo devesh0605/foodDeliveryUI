@@ -23,6 +23,9 @@ class RecentOrders extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              SizedBox(
+                width: 10,
+              ),
               Expanded(
                 child: Row(
                   children: [
