@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meal_ui/data/data.dart';
+import 'package:flutter_meal_ui/widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -42,9 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                       suffixIcon: IconButton(
                           onPressed: () {},
-                          icon: Icon(
-                            Icons.clear,
-                            size: 30.0,
+                          icon: Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                            child: Icon(
+                              Icons.clear,
+                              size: 30.0,
+                            ),
                           )),
                       focusColor: Colors.blue,
                       prefixIcon: Icon(
@@ -74,7 +78,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                )
+                ),
+                RecentOrders(),
               ]
             : [
                 Row(
@@ -117,6 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Expanded(flex: 1, child: Container())
                   ],
                 ),
+                RecentOrders(),
               ],
       ),
     );
