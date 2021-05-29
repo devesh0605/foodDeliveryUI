@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meal_ui/data/data.dart';
 import 'package:flutter_meal_ui/models/restaurant.dart';
+import 'package:flutter_meal_ui/screen/cart_screen.dart';
 import 'package:flutter_meal_ui/screen/restaurant_details.dart';
 import 'package:flutter_meal_ui/widgets/rating_stars.dart';
 import 'package:flutter_meal_ui/widgets/recent_orders.dart';
@@ -119,7 +121,11 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Food Delivery'),
         actions: [
           FlatButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) {
+                return CartScreen();
+              }));
+            },
             child: Text(
               'Cart(${currentUser.cart.length})',
               style: TextStyle(
@@ -146,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           icon: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                             child: Icon(
-                              Icons.clear,
+                              Icons.arrow_forward,
                               size: 30.0,
                             ),
                           )),
