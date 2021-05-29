@@ -76,3 +76,24 @@ class _CartQuantityState extends State<CartQuantity> {
     );
   }
 }
+
+// GestureDetector(
+// child: Text(
+// '-',
+// style: TextStyle(
+// fontWeight: FontWeight.w600,
+// fontSize: 30.0,
+// color: currentQuantity == 0
+// ? Colors.black
+//     : Theme.of(context).primaryColor,
+// ),
+// ),
+// onTap: currentQuantity == 0
+// ? null
+//     : () {
+// setState(() {
+// if (currentQuantity > 0) {
+// currentQuantity--;
+// }
+// });
+// }),
